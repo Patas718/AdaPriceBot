@@ -14,8 +14,8 @@ async function getPrice() {
 };
 
 async function main() {
-  let ltcPrice = await getPrice()
-  await client.user.setActivity(`$${ltcPrice}`, { type: 'WATCHING' })
+  let adaPrice = await getPrice()
+  await client.user.setActivity(`$${adaPrice}`, { type: 'WATCHING' })
     .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
     .catch(err => console.log(err));
 };
